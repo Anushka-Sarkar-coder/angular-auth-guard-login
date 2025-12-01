@@ -1,0 +1,53 @@
+<div [formGroup]="dashboardForm" class="dashboard-container">
+  <div class="dashboard-btn-container">
+    <button class="add-btn" (click)="add()">Add</button>
+    <button class="add-btn" (click)="save()">Save</button>
+    <button class="logout-btn" (click)="logout()">Logout</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody formArrayName="rows">
+      <tr *ngFor="let row of rows.controls; let i = index" [formGroupName]="i">
+        <td>{{ row.get("id")?.value }}</td>
+
+        <td>
+          <input formControlName="name" *ngIf="row.get('editable')?.value" />
+          <span *ngIf="!row.get('editable')?.value">{{
+            row.get("name")?.value
+          }}</span>
+        </td>
+
+        <td>
+          <input formControlName="email" *ngIf="row.get('editable')?.value" />
+          <span *ngIf="!row.get('editable')?.value">{{
+            row.get("email")?.value
+          }}</span>
+        </td>
+
+        <td>
+          <input formControlName="mobile" *ngIf="row.get('editable')?.value" />
+          <span *ngIf="!row.get('editable')?.value">{{
+            row.get("mobile")?.value
+          }}</span>
+        </td>
+
+        <td>
+          <button *ngIf="!row.get('editable')?.value" (click)="edit(i)">
+            Edit
+          </button>
+          <button (click)="delete(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

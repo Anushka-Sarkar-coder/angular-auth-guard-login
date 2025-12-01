@@ -1,16 +1,67 @@
 {
-  "users": [
+  "signup": [
     {
-      "id": 1,
-      "username": "admin",
-      "password": "admin123",
-      "role": "admin"
+      "id": "8cb0",
+      "firstName": "Anushka",
+      "lastName": "Sarkar",
+      "email": "anu@gmail.com",
+      "password": "Anu@123"
     },
     {
-      "id": 2,
-      "username": "user",
-      "password": "user123",
-      "role": "user"
+      "id": "ac85",
+      "firstName": "Ankit",
+      "lastName": "Nag",
+      "email": "ankit@gmail.com",
+      "password": "Ankit@123"
+    }
+  ],
+  "login": [
+    {
+      "id": "1533",
+      "email": "anu@gmail.com",
+      "password": "Anu@123"
+    },
+    {
+      "id": "f3f4",
+      "email": "ankit@gmail.com",
+      "password": "Ankit@123"
+    }
+  ],
+  "users": [
+    {
+      "id": 1763639573493,
+      "name": "Anushka",
+      "email": "anu@gmai.com",
+      "mobile": "987651230",
+      "editable": true
+    },
+    {
+      "id": 1763639616268,
+      "name": "Ankit",
+      "email": "anki@gvbh",
+      "mobile": "7418529630",
+      "editable": true
+    },
+    {
+      "id": 1763639616268,
+      "name": "Ankit Nag",
+      "email": "anki@gvbh",
+      "mobile": "7418529630",
+      "editable": true
+    },
+    {
+      "id": 1763639573493,
+      "name": "Anushka sarkar",
+      "email": "anu@gmai.com",
+      "mobile": "98765123023",
+      "editable": true
+    },
+    {
+      "id": 1763639616268,
+      "name": "Ankit ",
+      "email": "anki@gvbh",
+      "mobile": "7418529630",
+      "editable": true
     }
   ]
 }

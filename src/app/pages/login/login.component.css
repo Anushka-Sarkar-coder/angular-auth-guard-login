@@ -1,0 +1,159 @@
+.page-container {
+  display: flex;
+  height: 90vh;
+  background: #19172b;
+  color: #fff;
+  margin-top: 36px;
+}
+
+/* LEFT SIDE */
+.left-panel {
+  width: 45%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* RIGHT SIDE */
+.right-panel {
+  width: 55%;
+  padding: 33px 80px;
+  background: #1f1d33;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.name-row {
+  display: flex;
+  gap: 15px;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 20px;
+  background: #2b2943;
+  border: 1px solid #3b3957;
+  color: white;
+}
+.email-inp {
+  width: 50%;
+  margin-bottom: 20px;
+  background: #2b2943;
+  border: 1px solid #3b3957;
+  color: white;
+  margin-right: 10px;
+}
+
+::ng-deep .full {
+  width: 100%;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 20px;
+}
+
+::ng-deep .full-button {
+  width: 91%;
+  margin-top: 10px;
+  background: #7458f6 !important;
+  border-radius: 8px !important;
+  border: none !important;
+}
+
+.divider {
+  text-align: center;
+  margin: 25px 0;
+  opacity: 0.7;
+}
+
+.oauth-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 33px;
+}
+
+::ng-deep .p-button-text {
+  display: none !important;
+}
+
+::ng-deep .p-password:has(.p-password-toggle-mask-icon) .p-password-input {
+  width: 100%;
+  margin-bottom: 20px;
+  background: #2b2943;
+  border: 1px solid #3b3957;
+  color: white;
+}
+
+::ng-deep .p-password-toggle-mask-icon {
+  top: 35% !important;
+}
+
+/* -------------------------------------------------- */
+/* 🔥 RESPONSIVE DESIGN BELOW */
+/* -------------------------------------------------- */
+
+/* Tablets & below (≤ 992px) */
+@media screen and (max-width: 858px) {
+  /* Hide the carousel */
+  .left-panel {
+    display: none;
+  }
+
+  /* Make form full width */
+  .right-panel {
+    width: 100%;
+    padding: 40px 40px;
+  }
+
+  .page-container {
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .name-row {
+    flex-direction: column;
+  }
+}
+
+/* Mobile screens (≤ 576px) */
+@media screen and (max-width: 576px) {
+  .right-panel {
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .divider {
+    margin: 15px 0;
+  }
+
+  .oauth-buttons {
+    flex-direction: column;
+  }
+
+  .full-button {
+    font-size: 0.9rem !important;
+  }
+}

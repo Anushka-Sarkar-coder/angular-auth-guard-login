@@ -1,0 +1,79 @@
+<div class="page-container">
+  <!-- LEFT CAROUSEL -->
+  <div class="left-panel">
+    <p-carousel
+      [value]="images"
+      [numVisible]="1"
+      [numScroll]="1"
+      [circular]="true"
+      [autoplayInterval]="3000"
+      class="carousel"
+    >
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item" class="carousel-img" />
+      </ng-template>
+    </p-carousel>
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="right-panel">
+    <h1>Create an account</h1>
+
+    <p>
+      Already have an account?
+      <a href="/login">Log in</a>
+    </p>
+
+    <form class="form" [formGroup]="signupForm">
+      <div class="name-row">
+        <input
+          pInputText
+          placeholder="First name"
+          formControlName="firstName"
+          class="input"
+        />
+        <input
+          pInputText
+          placeholder="Last name"
+          formControlName="lastName"
+          class="input"
+        />
+      </div>
+
+      <div class="name-row">
+        <input
+          pInputText
+          placeholder="Email"
+          formControlName="email"
+          class="email-inp"
+        />
+        <input
+          pInputText
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+          class="email-inp"
+        />
+      </div>
+
+      <div class="terms">
+        <p-checkbox inputId="agree"></p-checkbox>
+        <label for="agree"
+          >I agree to the <a href="#">Terms & Conditions</a></label
+        >
+      </div>
+
+      <p-button
+        label="Create account"
+        styleClass="full-button"
+        (onClick)="createAccount()"
+      >
+      </p-button>
+
+      <div class="oauth-buttons">
+        <p-button label="Google" severity="secondary"></p-button>
+        <p-button label="Apple" severity="secondary"></p-button>
+      </div>
+    </form>
+  </div>
+</div>
